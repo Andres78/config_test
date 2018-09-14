@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      discovery:
+        port: 8888
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+  profiles:
+    active: native
+  security:
+    user:
+      name: admin
+      password: admin
+#      password: ${CONFIG_SERVICE_PASSWORD}
+
+server:
+  port: 8888
+
+

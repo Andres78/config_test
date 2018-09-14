@@ -1,0 +1,24 @@
+spring:
+  application.name: allspring
+  cloud:
+    consul:
+    host: consul
+    port: 8500
+    discovery:
+      port: 8185
+    config:
+    failfast: false
+
+server:
+  port: 8185
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - beans
+        - health
+        - metrics
+        - env
+
